@@ -1,0 +1,424 @@
+.aboutPage {
+  background: white;
+}
+
+.visionSection {
+  padding: 8rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.grid.reverse {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.imagePlaceholder {
+  height: 550px;
+  background: #001f3f;
+  background-image: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.imageLabel {
+  font-weight: 800;
+  color: var(--secondary);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  z-index: 2;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  border-left: 5px solid var(--secondary);
+  padding-left: 1.5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.detailBox {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.detailIcon {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.detailBox h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.detailBox p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Director Section */
+.directorSection {
+  padding: 8rem 0;
+  background: var(--surface-alt);
+}
+
+.quoteMark {
+  font-size: 8rem;
+  line-height: 1;
+  color: var(--secondary);
+  opacity: 0.3;
+  font-family: serif;
+  margin-bottom: -3rem;
+  margin-left: -1rem;
+}
+
+.professionalText {
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.signature {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.signature strong {
+  font-size: 1.35rem;
+  color: var(--primary);
+}
+
+.signature span {
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.directorImageFrame {
+  position: relative;
+  padding: 2rem;
+}
+
+.directorImg {
+  height: 500px;
+  background: #ddd;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.directorImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.directorImg:hover img {
+  transform: scale(1.05);
+}
+
+.goldFrame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 90%;
+  border: 4px solid var(--secondary);
+  border-radius: var(--radius-md);
+  z-index: 1;
+}
+
+/* History Section */
+.historySection {
+  padding: 8rem 0;
+  background: white;
+}
+
+.centeredHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 6rem;
+}
+
+.timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 4px;
+  background: var(--border-light);
+}
+
+.timelineItem {
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.year {
+  width: 120px;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  padding-right: 3rem;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.timelineItem::after {
+  content: "";
+  position: absolute;
+  left: 114px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background: var(--secondary);
+  border-radius: 50%;
+  border: 4px solid white;
+  z-index: 2;
+}
+
+.timelineContent {
+  flex: 1;
+  padding-left: 3rem;
+}
+
+.timelineContent h4 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.timelineContent p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Staff Section */
+.staffSection {
+  padding: 8rem 0;
+  background: var(--primary);
+  color: white;
+}
+
+.staffSection .sectionTitle {
+  color: white;
+}
+
+.staffGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.staffCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.staffCard:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px);
+  border-color: var(--secondary);
+}
+
+.staffImage {
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.staffInfo {
+  padding: 2rem;
+}
+
+.staffInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.designation {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.staffInfo p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Jobs Section */
+.jobsSection {
+  padding: 8rem 0;
+  background: var(--surface-alt);
+}
+
+.jobsBox {
+  background: white;
+  padding: 5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jobsBox p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 3.5rem;
+}
+
+.jobActions {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.jobActions .primaryBtn {
+  background: var(--primary);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.jobActions .primaryBtn:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+.jobActions .secondaryBtn {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.jobActions .secondaryBtn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .visionSection, .directorSection, .historySection, .staffSection, .jobsSection {
+    padding: 6rem 0;
+  }
+  .grid, .grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .imagePlaceholder, .directorImageFrame {
+    order: -1;
+  }
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+  .timeline::before, .timelineItem::after {
+    left: 20px;
+  }
+  .year {
+    width: 60px;
+    text-align: left;
+    font-size: 1.25rem;
+    padding-right: 0;
+    margin-left: 50px;
+  }
+  .timelineContent {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .visionSection, .directorSection, .historySection, .staffSection, .jobsSection {
+    padding: 4rem 0;
+  }
+  .quoteMark {
+    font-size: 5rem;
+    margin-bottom: -1rem;
+    margin-left: 0;
+  }
+  .lead {
+    font-size: 1.15rem;
+    padding-left: 1rem;
+  }
+  .jobsBox {
+    padding: 3rem 1.5rem;
+  }
+  .jobActions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

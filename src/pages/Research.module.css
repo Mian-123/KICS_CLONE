@@ -1,0 +1,335 @@
+.researchPage {
+  background: white;
+}
+
+.introSection {
+  padding: 8rem 0;
+  background: white;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.statsStrip {
+  display: flex;
+  gap: 3rem;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.statBox strong {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  line-height: 1;
+}
+
+.statBox span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.innovationGraphic {
+  height: 400px;
+  background: var(--surface-alt);
+  border-radius: var(--radius-lg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightIcon {
+  font-size: 8rem;
+  color: var(--secondary);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.circle1, .circle2 {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px dashed var(--secondary);
+  opacity: 0.1;
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  animation: rotate 20s linear infinite;
+}
+
+.circle2 {
+  width: 450px;
+  height: 450px;
+  animation: rotate 30s linear infinite reverse;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Labs Section */
+.labsSection {
+  padding: 8rem 0;
+  background: var(--surface-alt);
+}
+
+.centeredHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.labsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.labCard {
+  background: white;
+  padding: 3.5rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.labCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--secondary);
+}
+
+.labIcon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.labCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--primary);
+}
+
+.labCard p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  flex: 1;
+}
+
+.labBtn {
+  background: transparent;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0;
+  text-align: left;
+}
+
+/* Projects Section */
+.projectsSection {
+  padding: 8rem 0;
+  background: white;
+}
+
+.projectList {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.projectItem:hover {
+  background: white;
+  box-shadow: var(--shadow-md);
+  transform: translateX(10px);
+  border-left: 5px solid var(--secondary);
+}
+
+.projIcon {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-right: 2rem;
+}
+
+.projInfo {
+  flex: 1;
+}
+
+.projInfo h4 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.projCategory {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.projBudget {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 0.9rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Centers Section */
+.centersSection {
+  padding: 8rem 0;
+  background: var(--primary);
+  color: white;
+}
+
+.centersSection .sectionTitle {
+  color: white;
+}
+
+.centersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.whiteText {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.centerFeatures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.centerFeature h4 {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.centerFeature p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.graphicBox {
+  height: 450px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nodesGraphic {
+  width: 250px;
+  height: 250px;
+  background-image: radial-gradient(circle, var(--secondary) 2px, transparent 2px);
+  background-size: 30px 30px;
+  opacity: 0.2;
+}
+
+.graphicLabel {
+  margin-top: 2rem;
+  font-weight: 800;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 992px) {
+  .introSection, .labsSection, .projectsSection, .centersSection {
+    padding: 6rem 0;
+  }
+  .introGrid, .centersGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .innovationGraphic, .graphicBox {
+    order: -1;
+  }
+  .centerFeatures {
+    grid-template-columns: 1fr;
+  }
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .introSection, .labsSection, .projectsSection, .centersSection {
+    padding: 4rem 0;
+  }
+  .statsStrip {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .projectItem {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+  .projIcon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .projBudget {
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+}

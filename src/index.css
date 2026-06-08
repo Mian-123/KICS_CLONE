@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Dark Blue and Golden Theme */
+  --primary: #001f3f; /* Dark Blue / Navy */
+  --primary-hover: #003366;
+  --secondary: #FFD700; /* Golden */
+  --secondary-hover: #DAA520;
+  
+  --background: #FFFFFF;
+  --surface: #FDFDFD;
+  --surface-alt: #F4F4F4;
+  
+  --text-primary: #001f3f; /* Using Dark Blue for primary text */
+  --text-secondary: #2c3e50;
+  --text-muted: #576574;
+  
+  --border: #CCCCCC;
+  --border-light: #EEEEEE;
+  
+  /* Academic Radii - Sharp and Professional */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 2px; 
+
+  /* Academic Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 10px rgba(0,0,0,0.15);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.2);
+  --shadow-xl: 0 20px 40px rgba(0,0,0,0.12);
+  
+  /* Academic Glows */
+  --glow-primary: 0 0 20px rgba(0, 31, 63, 0.15);
+  --glow-secondary: 0 0 20px rgba(255, 215, 0, 0.15);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  --gradient-overlay: linear-gradient(to right, rgba(0, 31, 63, 0.95) 0%, rgba(0, 31, 63, 0.6) 100%);
+  --gradient-text: linear-gradient(135deg, #001f3f 0%, #FFD700 100%);
+
+  /* Typography */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Academic Glass Utility - Tinted with Maroon */
+.glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-light);
+}

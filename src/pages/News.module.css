@@ -1,0 +1,516 @@
+.newsPage {
+  background: white;
+}
+
+.newsNav {
+  background: white;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 80px;
+  z-index: 900;
+}
+
+.categoryList {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.categoryList li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.categoryList li:hover {
+  background: var(--surface-alt);
+  color: var(--primary);
+}
+
+.categoryList li.active {
+  color: var(--primary);
+  background: rgba(0, 31, 63, 0.05);
+  border-bottom: 3px solid var(--secondary);
+}
+
+/* Spotlight Section */
+.spotlightSection {
+  padding: 6rem 0;
+}
+
+.spotlightCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.spotlightImage {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.spotlightImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.spotlightCard:hover .spotlightImage img {
+  transform: scale(1.05);
+}
+
+.imgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 31, 63, 0.6), transparent);
+}
+
+.spotlightContent {
+  padding: 5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trendingTag {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+.spotlightContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.spotlightContent p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.readMoreBtn {
+  background: white;
+  color: var(--primary);
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+/* News Grid */
+.gallerySection {
+  padding: 6rem 0;
+  background: var(--surface-alt);
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.newsCard {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.newsCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+  border-bottom: 5px solid var(--secondary);
+}
+
+.cardImage {
+  height: 260px;
+  background: var(--surface-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.newsCard:hover .cardImage img {
+  transform: scale(1.05);
+}
+
+.category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.cardContent {
+  padding: 2.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+.newsSummary {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.readMore {
+  background: transparent;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0;
+  text-align: left;
+}
+
+/* Media Gallery */
+.mediaGallery {
+  padding: 4rem 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.mediaItem {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 3;
+}
+
+.mediaImgWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.mediaImgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mediaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 31, 63, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mediaItem:hover .mediaOverlay {
+  opacity: 1;
+}
+
+.mediaItem:hover .mediaImgWrapper img {
+  transform: scale(1.1);
+}
+
+.expandIcon {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  transform: scale(0.5);
+  transition: transform 0.3s ease;
+}
+
+.mediaItem:hover .expandIcon {
+  transform: scale(1);
+}
+
+.mediaInfo h4 {
+  color: white;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.mediaCategory {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary);
+  letter-spacing: 0.1em;
+}
+
+/* Video Grid */
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.videoCard {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.videoThumbnail {
+  position: relative;
+  height: 220px;
+}
+
+.videoThumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.videoCard:hover .playOverlay {
+  background: rgba(0, 31, 63, 0.4);
+}
+
+.playIcon {
+  font-size: 4rem;
+  color: white;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.videoCard:hover .playIcon {
+  transform: scale(1.1);
+  color: var(--secondary);
+}
+
+.duration {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.videoInfo {
+  padding: 1.5rem;
+}
+
+.videoInfo h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.videoInfo p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Newsletter Section */
+.newsletterSection {
+  padding: 8rem 0;
+}
+
+.newsletterBox {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.newsletterBox h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.goldText {
+  color: var(--secondary);
+}
+
+.newsletterBox p {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+}
+
+.subscribeForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscribeForm input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  font-weight: 600;
+  outline: none;
+}
+
+.subscribeForm input:focus {
+  border-color: var(--primary);
+}
+
+.subscribeForm button {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .newsNav {
+    top: 60px;
+  }
+  .spotlightSection, .gallerySection, .newsletterSection {
+    padding: 6rem 0;
+  }
+  .spotlightCard {
+    grid-template-columns: 1fr;
+  }
+  .spotlightContent {
+    padding: 3.5rem 2.5rem;
+  }
+  .spotlightContent h2 {
+    font-size: 2rem;
+  }
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .spotlightSection, .gallerySection, .newsletterSection {
+    padding: 4rem 0;
+  }
+  .categoryList {
+    gap: 1.5rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .categoryList li {
+    flex-shrink: 0;
+  }
+  .spotlightImage {
+    height: 300px;
+  }
+  .cardContent {
+    padding: 1.5rem;
+  }
+  .newsletterBox {
+    padding: 3rem 1.5rem;
+  }
+  .newsletterBox h3 {
+    font-size: 1.75rem;
+  }
+  .subscribeForm {
+    flex-direction: column;
+  }
+}

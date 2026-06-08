@@ -1,0 +1,300 @@
+.confPage {
+  background: white;
+}
+
+.impactSection {
+  padding: 6rem 0;
+  background: var(--surface-alt);
+}
+
+.impactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.impactCard {
+  background: white;
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 4px solid var(--secondary);
+}
+
+.impactIcon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.impactCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.impactCard p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Event Section */
+.eventSection {
+  padding: 8rem 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+}
+
+.filters {
+  display: flex;
+  background: var(--surface-alt);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.filterBtn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn.active, .filterBtn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.eventGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.eventCard {
+  display: flex;
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.eventCard:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateX(10px);
+  border-color: var(--secondary);
+}
+
+.dateBadge {
+  background: var(--primary);
+  color: white;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.day {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.month {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--secondary);
+}
+
+.cardBody {
+  padding: 3rem;
+  flex: 1;
+}
+
+.tagWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tag.upcoming {
+  background: #E3F2FD;
+  color: #1565C0;
+}
+
+.tag.past {
+  background: #F5F5F5;
+  color: #616161;
+}
+
+.eventYear {
+  font-weight: 800;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.cardBody h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.eventDesc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.detailsBtn {
+  font-weight: 800;
+  color: var(--primary);
+  background: transparent;
+  border-bottom: 2px solid var(--secondary);
+  padding: 0.25rem 0;
+}
+
+.registerBtn {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.registerBtn:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+/* CFP Section */
+.cfpSection {
+  padding: 0 0 8rem;
+}
+
+.cfpBox {
+  background: var(--gradient-primary);
+  padding: 6rem;
+  border-radius: var(--radius-xl);
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.cfpIcon {
+  font-size: 4rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.cfpBox h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.cfpBox p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.whiteBtn {
+  background: white;
+  color: var(--primary);
+  padding: 1.25rem 3rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.whiteBtn:hover {
+  background: var(--secondary);
+}
+
+@media (max-width: 992px) {
+  .impactSection, .eventSection, .cfpSection {
+    padding: 6rem 0;
+  }
+  .impactGrid {
+    grid-template-columns: 1fr;
+  }
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .impactSection, .eventSection, .cfpSection {
+    padding: 4rem 0;
+  }
+  .eventCard {
+    flex-direction: column;
+  }
+  .dateBadge {
+    width: 100%;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .day {
+    font-size: 2rem;
+  }
+  .cardBody {
+    padding: 2rem;
+  }
+  .cardBody h3 {
+    font-size: 1.5rem;
+  }
+  .cardFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cfpBox {
+    padding: 3rem 1.5rem;
+  }
+  .cfpBox h2 {
+    font-size: 2rem;
+  }
+}

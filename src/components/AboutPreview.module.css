@@ -1,0 +1,185 @@
+.previewSection {
+  padding: 8rem 0;
+  background-color: var(--surface);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imageCol {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 2rem;
+  right: -1rem;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.experienceBadge strong {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.experienceBadge span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tag {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--secondary);
+  padding-left: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featureDot {
+  width: 10px;
+  height: 10px;
+  background: var(--secondary);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.feature p {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.readMoreBtn {
+  padding: 1rem 2.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: translateX(10px);
+}
+
+@media (max-width: 992px) {
+  .previewSection {
+    padding: 6rem 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .imageWrapper img {
+    height: 450px;
+  }
+  .experienceBadge {
+    right: 2rem;
+    bottom: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .previewSection {
+    padding: 4rem 0;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
+  .description {
+    font-size: 1.05rem;
+  }
+  .experienceBadge {
+    position: static;
+    margin-top: 1.5rem;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+  }
+}

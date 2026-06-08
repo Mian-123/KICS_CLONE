@@ -1,0 +1,140 @@
+.ecosystemSection {
+  padding: 8rem 0;
+  background-color: var(--surface-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.textContent h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.textContent p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--primary);
+}
+
+.ctaBtn:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.ecoCard {
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.ecoCard:hover {
+  transform: translateY(-5px);
+  background: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.ecoIcon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.ecoInfo h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.ecoInfo p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.ecoHighlight {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+@media (max-width: 992px) {
+  .ecosystemSection {
+    padding: 6rem 0;
+  }
+  .textContent h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 4rem;
+  }
+  
+  .textContent {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystemSection {
+    padding: 4rem 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .textContent h2 {
+    font-size: 2rem;
+  }
+  .textContent p {
+    font-size: 1rem;
+  }
+}
